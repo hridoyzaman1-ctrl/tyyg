@@ -11,11 +11,11 @@ const PrivacyPolicy: React.FC = () => {
       <SEO title="Privacy Policy" description="Thynkit Privacy Policy - How we collect, use, and protect your data." />
       <div className="bg-gray-50 dark:bg-[#111827] min-h-screen py-20 transition-colors duration-500">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-white dark:bg-[#1F2937] p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 reveal-up">
+          <div className="bg-white dark:bg-[#1F2937] p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 animate-fade-in">
             <h1 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-8 border-b border-gray-200 dark:border-gray-700 pb-6">
               Privacy Policy
             </h1>
-            
+
             <div className="prose prose-lg prose-gray dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
               <p>
                 This privacy policy has been compiled to serve better those concerned with how their 'Personally Identifiable Information' (PII) is being used online. As described in privacy law and information security, PII is information that can be used on its own or with other information to identify, contact, or locate a single person or identify an individual in context. Please read our privacy policy carefully to understand how we collect, use, protect, or otherwise handle your Personally Identifiable Information per our website.

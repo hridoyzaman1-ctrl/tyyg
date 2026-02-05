@@ -130,7 +130,8 @@ const WhyThynkit: React.FC = () => {
                         </h3>
                         <div className="text-xs font-bold text-primary mb-12 uppercase">{d.science.subtitle}</div>
 
-                        <div className="relative max-w-xl mx-auto h-64 flex items-center justify-center">
+                        {/* DESKTOP VIEW */}
+                        <div className="hidden md:flex relative max-w-xl mx-auto h-64 items-center justify-center">
                             {/* The Brain Circle */}
                             <div className="relative z-10 w-56 h-56 rounded-full bg-gradient-to-br from-orange-100 to-white dark:from-gray-700 dark:to-gray-900 border-[6px] border-white dark:border-gray-600 shadow-2xl flex items-center justify-center animate-pulse-slow">
                                 <div className="absolute inset-2 rounded-full border border-orange-200 dark:border-gray-600"></div>
@@ -156,6 +157,26 @@ const WhyThynkit: React.FC = () => {
 
                                 {/* Position 6: Center Right - Modern */}
                                 {renderScienceItem(d.science.items[5], { top: '50%', right: '25%', transform: 'translateY(-50%)' }, 'center')}
+                            </div>
+                        </div>
+
+                        {/* MOBILE VIEW */}
+                        <div className="flex md:hidden flex-col items-center gap-8 px-4">
+                            {/* The Brain Circle (Smaller) */}
+                            <div className="relative z-10 w-40 h-40 rounded-full bg-gradient-to-br from-orange-100 to-white dark:from-gray-700 dark:to-gray-900 border-[4px] border-white dark:border-gray-600 shadow-xl flex items-center justify-center animate-pulse-slow">
+                                <div className="absolute inset-2 rounded-full border border-orange-200 dark:border-gray-600"></div>
+                                <span className="text-xl font-serif font-medium text-gray-800 dark:text-white">Brain</span>
+                            </div>
+
+                            {/* Items Grid */}
+                            <div className="grid grid-cols-2 gap-3 w-full">
+                                {d.science.items.map((item: any, idx: number) => (
+                                    <div key={idx} className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                                        <span className="material-symbols-outlined text-primary mb-2 text-2xl">{item.icon}</span>
+                                        <span className="text-[10px] font-bold uppercase text-gray-800 dark:text-gray-200 mb-1">{item.label}</span>
+                                        <p className="text-[9px] text-gray-500 leading-snug">{item.tooltip}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
