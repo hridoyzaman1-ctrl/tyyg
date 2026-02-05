@@ -168,7 +168,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-white dark:bg-[#1F2937] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 reveal-up">
         <div className="grid lg:grid-cols-2 gap-0 relative">
-          <div className="relative group h-[38vh] lg:h-[500px] overflow-hidden parallax-wrapper">
+          <div className="relative group h-[33vh] lg:h-[500px] overflow-hidden parallax-wrapper">
             <LazyImage
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnnPGx675hBo1Ip9A9SfaCrh_vT-LcEq23gdYuFoMl0ozK7_zoUlL8TMJr1PlJ8KOeXNtANFzibuX_k_XcczrzujTlQElgHzz6YjJLIOOQuYo_ufYEeH78dTPZw6UpmktFjYAEgRZ2lZp7KNS8_4_0NkCdXGmlSaZ6M7arxPNj9uo7t6QfA95tzXpGb_KdQ1-CxC0C6AzXGFts-zza1BN-ob7k1u9rWZpkWLdIFBtyjDTW2RJb9dcUwBKfj3gQR820dH-baZAuoAA"
               alt="Messy server room with tangled wires"
@@ -182,7 +182,7 @@ const Home: React.FC = () => {
               <p className="text-gray-400 max-w-sm text-sm">Fragmented legacy systems holding back your business growth.</p>
             </div>
           </div>
-          <div className="relative group h-[38vh] lg:h-[500px] overflow-hidden border-l border-white/10 parallax-wrapper">
+          <div className="relative group h-[33vh] lg:h-[500px] overflow-hidden border-l border-white/10 parallax-wrapper">
             <LazyImage
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdB6gDuIKfnsIaPfuN1oIm9v1ziXVNqtsqevto_Jp2oldN74G-JDWxgMjj-I2-9Y-DnyvUnLTZVgH3ZjxFOFpfcFUcOzmWQqhGhrUAZb4u0N2lg13yMvQFXPHco7-p2MuYpKO825HE4GZTLi2I1BkLJXMrfP6ipaIo0U_2Ny-domde5mN85IEJhDPlGRMRdJBwnlICLe92rh58yV4HJD11F7_AbLcdsqjaBYjoqGDlXPyOAMa29XgcP0cjJWwZbmaMYR7m4DGMaJA"
               alt="Modern clean data center with blue lights"
