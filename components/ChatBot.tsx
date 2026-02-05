@@ -23,6 +23,7 @@ const ChatBot: React.FC = () => {
     const [position, setPosition] = useState<{ x: number, y: number } | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [hasMoved, setHasMoved] = useState(false);
+    const [isVisible, setIsVisible] = useState(true); // New visibility state
 
     const dragRef = useRef<HTMLDivElement>(null);
     const dragStartPos = useRef({ x: 0, y: 0 });
@@ -63,6 +64,24 @@ const ChatBot: React.FC = () => {
             clearTimeout(initialTimer);
         };
     }, [isOpen, isDragging, location.pathname]);
+
+    // Scroll Visibility Logic
+    useEffect(() => {
+        const handleScroll = () => {
+            if (location.pathname === '/') {
+                // If on Home, only show after scrolling past Hero (approx 80vh)
+                setIsVisible(window.scrollY > window.innerHeight * 0.8);
+            } else {
+                setIsVisible(true);
+            }
+        };
+
+        // Initial check
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [location.pathname]);
 
     const handleDragStart = (clientX: number, clientY: number) => {
         if (!dragRef.current) return;
@@ -172,7 +191,11 @@ const ChatBot: React.FC = () => {
     const isLeftHalf = position ? position.x < window.innerWidth / 2 : false;
 
     return (
-        <div ref={dragRef} className={`fixed z-[60] flex flex-col items-end ${!position ? 'bottom-6 right-6' : ''}`} style={position ? { left: position.x, top: position.y } : {}}>
+        <div
+            ref={dragRef}
+            className={`fixed z-[60] flex flex-col items-end transition-all duration-500 ${!position ? 'bottom-6 right-6' : ''} ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-20 scale-90 pointer-events-none'}`}
+            style={position ? { left: position.x, top: position.y } : {}}
+        >
 
             {/* Minimized Dialogue Popup */}
             {showPopup && !isOpen && !isDragging && (
