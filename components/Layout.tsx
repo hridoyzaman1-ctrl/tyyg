@@ -67,6 +67,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       setIsScrolled(scrolled > 50);
       setShowBackToTop(scrolled > 500);
 
+      // Disable Parallax on Mobile
+      if (window.innerWidth < 768) return;
+
       const parallaxImages = document.querySelectorAll('.parallax-img');
       parallaxImages.forEach((img: any) => {
         const speed = img.dataset.speed || 0.05;

@@ -166,7 +166,7 @@ const Home: React.FC = () => {
   return (
     <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-20">
       {/* Hero Section */}
-      <section className="relative bg-white dark:bg-[#1F2937] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 reveal-up">
+      <section className="relative bg-white dark:bg-[#1F2937] rounded-2xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 reveal-up md:mt-0 mt-6 z-0">
         <div className="grid lg:grid-cols-2 gap-0 relative">
           <div className="relative group h-[33vh] lg:h-[500px] overflow-hidden parallax-wrapper">
             <LazyImage
