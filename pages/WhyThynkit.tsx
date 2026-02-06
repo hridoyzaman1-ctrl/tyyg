@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { WHY_THYNKIT_DATA } from '../data';
 import LazyImage from '../components/LazyImage';
 
@@ -293,10 +294,10 @@ const WhyThynkit: React.FC = () => {
                                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-8 leading-relaxed max-w-xs relative z-10 group-hover:text-gray-700 dark:group-hover:text-gray-300">
                                     {opt.desc}
                                 </p>
-                                <button className="bg-transparent border-2 border-[#5ea9b6] text-[#5ea9b6] px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-glow hover:bg-[#5ea9b6] hover:text-white transform hover:scale-105 mt-auto relative z-10 overflow-hidden">
+                                <Link to="/contact" className="bg-transparent border-2 border-[#5ea9b6] text-[#5ea9b6] px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-glow hover:bg-[#5ea9b6] hover:text-white transform hover:scale-105 mt-auto relative z-10 overflow-hidden">
                                     <span className="relative z-10">{opt.btn}</span>
                                     <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
-                                </button>
+                                </Link>
                             </div>
                         ))}
                     </div>
